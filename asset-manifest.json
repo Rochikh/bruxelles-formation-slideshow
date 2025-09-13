@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.6a869844.js",
-    "index.html": "/index.html",
-    "main.6a869844.js.map": "/static/js/main.6a869844.js.map"
+    "main.js": "/bruxelles-formation-slideshow/static/js/main.bdc75f6c.js",
+    "index.html": "/bruxelles-formation-slideshow/index.html",
+    "main.bdc75f6c.js.map": "/bruxelles-formation-slideshow/static/js/main.bdc75f6c.js.map"
   },
   "entrypoints": [
-    "static/js/main.6a869844.js"
+    "static/js/main.bdc75f6c.js"
   ]
 }
