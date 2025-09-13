@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Users, Building, Crown, Mail, Phone, MapPin } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Users, Building, Crown, MapPin } from 'lucide-react';
 
 const BruxellesFormationSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,15 +60,15 @@ const BruxellesFormationSlideshow = () => {
     }
   };
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === 'ArrowLeft') prevSlide();
-    };
+ useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentSlide]);
+  window.addEventListener('keydown', handleKeyDown);
+  return () => window.removeEventListener('keydown', handleKeyDown);
+}, [currentSlide, nextSlide, prevSlide]);
 
   const renderSlide = (slide) => {
     switch (slide.type) {
