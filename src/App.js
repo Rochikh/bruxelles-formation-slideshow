@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, Users, Building, Crown, MapPin } from 'lucide-react';
 
 const BruxellesFormationSlideshow = () => {
@@ -48,17 +48,17 @@ const BruxellesFormationSlideshow = () => {
 
   const totalSlides = slides.length;
 
-  const nextSlide = () => {
-    if (currentSlide < totalSlides - 1) {
-      setCurrentSlide(currentSlide + 1);
-    }
-  };
+const nextSlide = useCallback(() => {
+  if (currentSlide < totalSlides - 1) {
+    setCurrentSlide(currentSlide + 1);
+  }
+}, [currentSlide, totalSlides]);
 
-  const prevSlide = () => {
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
+const prevSlide = useCallback(() => {
+  if (currentSlide > 0) {
+    setCurrentSlide(currentSlide - 1);
+  }
+}, [currentSlide]);
 
  useEffect(() => {
   const handleKeyDown = (e) => {
